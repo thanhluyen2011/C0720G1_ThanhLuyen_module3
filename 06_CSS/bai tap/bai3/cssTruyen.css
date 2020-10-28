@@ -1,0 +1,25 @@
+h2{
+    color: red;
+    background-color: black;
+    text-align: center;
+    height: 50px;
+}
+.tomtat{
+    color: red;
+    text-align: center;
+}
+.letrai{
+    float: left;
+    width: 50%;
+}
+.lephai{
+    float: right;
+    width: 50%;
+}
+.lui{
+    color: blue;
+    text-indent: 50px;
+}
+.menhde{
+    color: darkblue;
+}

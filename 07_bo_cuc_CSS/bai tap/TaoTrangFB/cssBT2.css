@@ -1,0 +1,65 @@
+.khungtren{
+    width: 100%;
+    border: 1px solid;
+    color: white;
+    background-color: blue;
+    height: 50px;
+    position: relative;
+}
+.khungtrai{
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+.khungphai{
+    float: right;
+    width: 70%;
+    height: 100%;
+}
+.chuphai{
+    margin-left: 90px;
+    color: white;
+}
+.thehr{
+    position: relative;
+    top: 30px;
+    width: 70%;
+    margin-left: 0px;
+}
+.icon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+.chuavata{
+    position: absolute;
+    color: white;
+}
+.bentrai{
+    position: relative;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    top: 30px;
+}
+.khungtrong{
+    position: absolute;
+    top: 10px;
+    left: 7%;
+    color: blue;
+    background-color: white;
+    height: 30px;
+    width: 20%;
+    border-radius: 20px;
+}
+.chuTimKiem{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+.chu{
+    position: relative;
+    top: -5px;
+    margin-left: 5px;
+}

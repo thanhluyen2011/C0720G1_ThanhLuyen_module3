@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Tahoma;
+    font-size: 14px;
+}
+
+header {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+header ul {
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header ul, li {
+    display: inline;
+    margin: 5px;
+}
+
+#login {
+    float: right;
+}
+
+header li:hover {
+    background-color: red;
+}
+
+nav {
+    width: 20%;
+    height: 500px;
+    color: red;
+    background-color: cornflowerblue;
+    margin-bottom: 5px;
+    float: left;
+}
+
+nav a {
+    padding-top: 50px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 130px;
+}
+
+section {
+    width: 60%;
+    height: 500px;
+    color: black;
+    background-color: yellow;
+    margin-bottom: 5px;
+    float: right;
+    float: left;
+}
+section h1,h2{
+    padding: 10px;
+}
+
+section p {
+    text-align: justify;
+    padding: 10px;
+}
+
+aside {
+    width: 20%;
+    height: 500px;
+    color: red;
+    background-color: lightgrey;
+    margin-bottom: 5px;
+    float: right;
+    text-align: center;
+}
+
+aside a {
+    text-align: center;
+    border: 1px solid black;
+    display: block;
+    height: 70px;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 25%;
+    position: relative;
+}
+
+footer {
+    padding: 10px;
+    background-color: gray;
+    color: red;
+}
+
+footer a {
+    margin-left: 700px;
+}

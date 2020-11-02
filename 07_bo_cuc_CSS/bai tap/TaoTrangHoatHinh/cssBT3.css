@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Tahoma;
+    font-size: 14px;
+    position: relative;
+}
+header {
+    padding: 10px;
+    color: black;
+    background-color: white;
+}
+
+head-link {
+    padding: 0;
+    color: black;
+}
+
+head-link ul {
+    padding: 0;
+}
+
+head-link li {
+    display: inline;
+    margin: 100px;
+    border-right: 1px solid black;
+}
+
+head-link ul, li {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+left-content {
+    padding: 10px;
+    width: 32.35%;
+    min-height: 1000px;
+    background-color: white;
+    margin-bottom: 5px;
+    float: left;
+}
+
+left-content a {
+    padding: 10px;
+}
+
+right-content {
+    position: absolute;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 64.89%;
+    min-height: 1000px;
+    background-color: white;
+    float: right;
+}
+
+.p {
+    padding: 10px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 38px;
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    background-color: lightgrey;
+    color: black;
+}
+
+.chu {
+    font-weight: bold;
+}
+
+.so {
+    color: dimgray;
+}

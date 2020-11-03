@@ -10,7 +10,7 @@
 <head>
     <title>Converter</title>
 </head>
-<body>
+<body >
 <%
     float rate = Float.parseFloat(request.getParameter("rate"));
     float usd = Float.parseFloat(request.getParameter("usd"));

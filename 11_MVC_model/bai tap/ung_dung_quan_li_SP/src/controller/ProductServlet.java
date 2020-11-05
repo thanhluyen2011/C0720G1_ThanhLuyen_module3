@@ -25,11 +25,44 @@ public class ProductServlet extends HttpServlet {
                 saveProduct(request,response);
                 break;
             case "create":
+                addProducte(request,response);
                 break;
             case "update":
                 break;
+            case "search":
+                searchProduct(request,response);
+                break;
             default:
                 getAllProduct(request,response);
+        }
+    }
+
+    private void searchProduct(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("search");
+        List<Product> list = productService.searchProductByName(name);
+        RequestDispatcher dispatcher ;
+        request.setAttribute("list",list);
+        dispatcher = request.getRequestDispatcher("search.jsp");
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addProducte(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        String price = request.getParameter("price");
+        String status = request.getParameter("status");
+        String producer = request.getParameter("producer");
+        Product product = new Product(name,price,status,producer);
+        productService.add(product);
+        try {
+            response.sendRedirect("/home");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -40,7 +73,8 @@ public class ProductServlet extends HttpServlet {
         String status = request.getParameter("status");
         String producer = request.getParameter("producer");
         Product product = new Product(name,price,status,producer);
-        productService.add(product);
+        product.setId(id);
+        productService.update(id,product);
         try {
             response.sendRedirect("/home");
         } catch (IOException e) {
@@ -61,11 +95,23 @@ public class ProductServlet extends HttpServlet {
                 editProduct(request,response);
                 break;
             case "create":
+                createProduct(request,response);
                 break;
             case "update":
                 break;
             default:
                 getAllProduct(request,response);
+        }
+    }
+
+    private void createProduct(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("create.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

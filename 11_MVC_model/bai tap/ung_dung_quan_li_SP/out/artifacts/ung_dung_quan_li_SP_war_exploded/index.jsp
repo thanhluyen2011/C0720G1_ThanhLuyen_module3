@@ -18,6 +18,12 @@
   </head>
   <body>
   <h3 style="text-align: center;background-color: red">List Product</h3>
+  <p>
+    <a style="text-align: center" href="/home?action=create">Create new Product</a>
+  </p>
+  <form action="/home?action=search" method="post">
+    <input type="text" name="search"> <input type="submit">
+  </form>
   <table class="table table-striped">
     <thead>
     <tr>

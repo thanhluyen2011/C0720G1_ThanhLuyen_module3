@@ -11,7 +11,7 @@ public class ProductServiceImpl implements ProductService {
     private static Map<Integer,Product> productMap;
     static {
         productMap = new HashMap<>();
-        productMap.put(1,new Product("XeMay","1000","xecui","honda"));
+        productMap.put(1,new Product("tu","1000","xecui","honda"));
         productMap.put(2,new Product("XeDap","1000","xecui","honda"));
         productMap.put(3,new Product("XeDapDien","1000","xecui","honda"));
         productMap.put(4,new Product("OTo","1000","xecui","honda"));
@@ -41,4 +41,16 @@ public class ProductServiceImpl implements ProductService {
     public Product findById(int id) {
         return productMap.get(id);
     }
+
+    @Override
+    public List<Product> searchProductByName(String name) {
+        List<Product> list = new ArrayList<>();
+        for (Map.Entry<Integer,Product> product : productMap.entrySet()) {
+            if (product.getValue().getName().contains(name)){
+                list.add(product.getValue());
+            }
+        }
+        return list;
+    }
+
 }

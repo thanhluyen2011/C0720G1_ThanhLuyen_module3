@@ -60,4 +60,12 @@ public class Product {
     public void setProducer(String producer) {
         this.producer = producer;
     }
+
+    public static int getCusNum() {
+        return cusNum;
+    }
+
+    public static void setCusNum(int cusNum) {
+        Product.cusNum = cusNum;
+    }
 }

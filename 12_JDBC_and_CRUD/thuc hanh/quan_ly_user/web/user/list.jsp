@@ -22,7 +22,8 @@
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>
         <form action="/users?action=search" method="post">
-            <input type="text" name="search"><input type="submit" value="Search">
+            <input type="hidden" name="action" value="search">
+            <input type="text" name="searchUser"><input type="submit" value="Search">
         </form>
         <tr>
             <th>ID</th>

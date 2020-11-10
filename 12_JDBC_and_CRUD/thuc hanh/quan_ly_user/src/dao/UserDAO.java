@@ -16,7 +16,7 @@ public class UserDAO implements IUserDAO {
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
-    private static final String SEARCH_USERS_SQL = "select * from users where like ?";
+    private static final String SEARCH_USERS_SQL = "select * from users where name like ?;";
 
     public UserDAO() {
     }
@@ -34,7 +34,23 @@ public class UserDAO implements IUserDAO {
 
     @Override
     public List<User> search(String name) {
-        return null;
+        List<User> customerList = new ArrayList<>();
+        try(Connection connection = getConnection();
+        PreparedStatement statement = connection.prepareStatement(SEARCH_USERS_SQL)) {
+            statement.setString(1, "%" + name + "%");
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt("id");
+                String nameUser = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country = resultSet.getString("country");
+                User user = new User(id,nameUser,email,country);
+                customerList.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return customerList;
     }
 
     @Override

@@ -35,12 +35,25 @@ public class UserServlet extends HttpServlet {
                     updateUser(request, response);
                     break;
                 case "search" :
+                    searchUser(request,response);
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
     }
 
+    private void searchUser(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("searchUser");
+        request.setAttribute("listUser",userDAO.search(name));
+        RequestDispatcher rd = request.getRequestDispatcher("user/list.jsp");
+        try {
+            rd.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

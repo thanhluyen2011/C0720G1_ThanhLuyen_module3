@@ -17,6 +17,7 @@
 
   </head>
   <body>
+  <h1 style="color: red;background-color: cornflowerblue;text-align: center">Customer List</h1>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="/home">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,6 +62,7 @@
     </c:forEach>
     </tbody>
   </table>
+<%--  modeledit--%>
   <div class="modal fade" id="modelEdit" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -90,7 +92,7 @@
       </div>
     </div>
   </div>
-
+<%--modalDelete--%>
   <div class="modal fade" id="modelDelete" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -118,7 +120,7 @@
 
 
 
-
+<%--modalCreate--%>
 
   <div class="modal fade" id="modelCreate" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">

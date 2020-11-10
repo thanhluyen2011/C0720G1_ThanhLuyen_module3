@@ -17,6 +17,7 @@
 
   </head>
   <body>
+  <h1 style="color: red;background-color: cornflowerblue;text-align: center">Customer List</h1>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="/home">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

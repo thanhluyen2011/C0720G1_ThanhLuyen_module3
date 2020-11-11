@@ -16,7 +16,26 @@ import java.util.List;
 public class CustomerServlet extends HttpServlet {
     CustomerDao customerDao = new CustomerDao();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+//        String action = request.getParameter("action");
+//        if (action == null){
+//            action = " ";
+//        }
+//        switch (action){
+//            case "delete":
+//                deleteCustomer(request,response);
+//                break;
+//            case "edit":
+//                editCustomer(request,response);
+//                break;
+//            case "add":
+//                addCustomer(request,response);
+//                break;
+//            case "search":
+//                searchCustomerByName(request,response);
+//                break;
+//            default:
+//                getAllCustomer(request,response);
+//        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

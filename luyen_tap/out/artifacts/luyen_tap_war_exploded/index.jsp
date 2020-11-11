@@ -62,6 +62,7 @@
     </c:forEach>
     </tbody>
   </table>
+<%--  modeledit--%>
   <div class="modal fade" id="modelEdit" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -91,7 +92,7 @@
       </div>
     </div>
   </div>
-
+<%--modalDelete--%>
   <div class="modal fade" id="modelDelete" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -119,7 +120,7 @@
 
 
 
-
+<%--modalCreate--%>
 
   <div class="modal fade" id="modelCreate" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">

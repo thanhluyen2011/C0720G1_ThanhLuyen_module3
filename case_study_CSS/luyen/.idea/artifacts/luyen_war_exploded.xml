@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="luyen:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/luyen_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="luyen/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="luyen" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/web/luyen/jstl-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/luyen/jstl-api-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/luyen/jstl-impl-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/luyen/mysql-connector-java-8.0.17.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

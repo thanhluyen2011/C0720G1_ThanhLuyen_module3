@@ -17,6 +17,8 @@
 
   </head>
   <body>
+  <a href="/student?action=add">create</a>
+  <a href="/student">Home</a>
   <table class="table table-dark">
     <thead>
     <tr>

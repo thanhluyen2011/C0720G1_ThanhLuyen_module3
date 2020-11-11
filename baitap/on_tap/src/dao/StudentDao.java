@@ -11,7 +11,7 @@ public class StudentDao implements IStudentDao{
     private String jdbcCustomername = "root";
     private String jdbcPassword = "12345678";
     private final String SHOW_ALL_STUDENT = "select * from student;";
-    private final String CREATE_STUDENT="insert into student values(?,?,?)";
+    private final String CREATE_STUDENT="insert into student(name , gender, phoneNumber) values(?,?,?);";
     protected Connection getConnection(){
         Connection connection = null;
         try {
